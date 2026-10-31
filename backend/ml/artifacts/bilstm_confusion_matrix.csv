@@ -1,0 +1,5 @@
+actual / predicted,book,cancel,availability,other
+book,150,0,0,0
+cancel,0,150,0,0
+availability,0,0,150,0
+other,3,0,0,0

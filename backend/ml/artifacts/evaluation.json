@@ -1,0 +1,7358 @@
+{
+  "bilstm": {
+    "n": 453,
+    "intent_report": {
+      "book": {
+        "precision": 0.9803921568627451,
+        "recall": 1.0,
+        "f1-score": 0.9900990099009901,
+        "support": 150.0
+      },
+      "cancel": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "availability": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "other": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "accuracy": 0.9933774834437086,
+      "macro avg": {
+        "precision": 0.7450980392156863,
+        "recall": 0.75,
+        "f1-score": 0.7475247524752475,
+        "support": 453.0
+      },
+      "weighted avg": {
+        "precision": 0.9868848201532269,
+        "recall": 0.9933774834437086,
+        "f1-score": 0.99009900990099,
+        "support": 453.0
+      }
+    },
+    "confusion_matrix_labels": [
+      "book",
+      "cancel",
+      "availability",
+      "other"
+    ],
+    "confusion_matrix": [
+      [
+        150,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        150,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        150,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0
+      ]
+    ],
+    "entity_per_field": {
+      "sport": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 450,
+        "fp": 0,
+        "fn": 0
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 425,
+        "fp": 0,
+        "fn": 0
+      },
+      "time": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 427,
+        "fp": 0,
+        "fn": 0
+      },
+      "players": {
+        "precision": 0.9933774834437086,
+        "recall": 1.0,
+        "f1": 0.9966777408637874,
+        "tp": 150,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    "entity_micro": {
+      "precision": 0.9993117687543015,
+      "recall": 1.0,
+      "f1": 0.9996557659208262,
+      "tp": 1452,
+      "fp": 1,
+      "fn": 0
+    },
+    "field_exact_accuracy": {
+      "sport": 1.0,
+      "date": 1.0,
+      "time": 1.0,
+      "players": 0.9977924944812362
+    },
+    "complete_request_accuracy": 0.9933774834437086,
+    "errors": [
+      {
+        "text": "hi campus assistant",
+        "gold_intent": "other",
+        "gold_entities": [],
+        "prediction": {
+          "intent": "book",
+          "entities": [],
+          "fields": {
+            "sport": null,
+            "date": null,
+            "time": null,
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "thanks for helping",
+        "gold_intent": "other",
+        "gold_entities": [],
+        "prediction": {
+          "intent": "book",
+          "entities": [],
+          "fields": {
+            "sport": null,
+            "date": null,
+            "time": null,
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "when does the canteen close",
+        "gold_intent": "other",
+        "gold_entities": [],
+        "prediction": {
+          "intent": "book",
+          "entities": [
+            {
+              "label": "players",
+              "start": 10,
+              "end": 13
+            }
+          ],
+          "fields": {
+            "sport": null,
+            "date": null,
+            "time": null,
+            "players": "the"
+          }
+        }
+      }
+    ]
+  },
+  "rules": {
+    "n": 453,
+    "intent_report": {
+      "book": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "cancel": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 150.0
+      },
+      "availability": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "other": {
+        "precision": 0.0196078431372549,
+        "recall": 1.0,
+        "f1-score": 0.038461538461538464,
+        "support": 3.0
+      },
+      "accuracy": 0.6688741721854304,
+      "macro avg": {
+        "precision": 0.5049019607843137,
+        "recall": 0.75,
+        "f1-score": 0.5096153846153846,
+        "support": 453.0
+      },
+      "weighted avg": {
+        "precision": 0.6623815088949487,
+        "recall": 0.6688741721854304,
+        "f1-score": 0.6625063678043811,
+        "support": 453.0
+      }
+    },
+    "confusion_matrix_labels": [
+      "book",
+      "cancel",
+      "availability",
+      "other"
+    ],
+    "confusion_matrix": [
+      [
+        150,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        150
+      ],
+      [
+        0,
+        0,
+        150,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ]
+    ],
+    "entity_per_field": {
+      "sport": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 450,
+        "fp": 0,
+        "fn": 0
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 425,
+        "fp": 0,
+        "fn": 0
+      },
+      "time": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 427,
+        "fp": 0,
+        "fn": 0
+      },
+      "players": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 150,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "entity_micro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1452,
+      "fp": 0,
+      "fn": 0
+    },
+    "field_exact_accuracy": {
+      "sport": 1.0,
+      "date": 1.0,
+      "time": 1.0,
+      "players": 1.0
+    },
+    "complete_request_accuracy": 0.6688741721854304,
+    "errors": [
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation tomorrow at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "tomorrow",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation tomorrow at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "tomorrow",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-12-20 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-12-20",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation today at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "today",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-11-15 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-11-15",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation tomorrow at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "tomorrow",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation today at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "today",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation today at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "label": "time",
+            "start": 51,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 47
+            },
+            {
+              "label": "time",
+              "start": 51,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "today",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-11-15 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-11-15",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-11-15 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-11-15",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation tomorrow at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "tomorrow",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-12-20 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-12-20",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation today at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "today",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation tomorrow at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "tomorrow",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation tomorrow at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "tomorrow",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation tomorrow at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "tomorrow",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation today at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "today",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation tomorrow at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "tomorrow",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-11-15 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-11-15",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation today at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "label": "time",
+            "start": 51,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 47
+            },
+            {
+              "label": "time",
+              "start": 51,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "today",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation today at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "label": "time",
+            "start": 51,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 47
+            },
+            {
+              "label": "time",
+              "start": 51,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "today",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation tomorrow at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "tomorrow",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation tomorrow at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "tomorrow",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation today at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "label": "time",
+            "start": 51,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 47
+            },
+            {
+              "label": "time",
+              "start": 51,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "today",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-11-15 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-11-15",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-11-15 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-11-15",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation tomorrow at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "tomorrow",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation tomorrow at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "tomorrow",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation today at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 45
+          },
+          {
+            "label": "time",
+            "start": 49,
+            "end": 53
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 45
+            },
+            {
+              "label": "time",
+              "start": 49,
+              "end": 53
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "today",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-11-15 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-11-15",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-12-20 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-12-20",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-11-15 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-11-15",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation today at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "today",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation today at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "today",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-11-15 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-11-15",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-12-20 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-12-20",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-12-20 at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-12-20",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-11-15 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-11-15",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation tomorrow at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "tomorrow",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation today at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 43
+          },
+          {
+            "label": "time",
+            "start": 47,
+            "end": 52
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 43
+            },
+            {
+              "label": "time",
+              "start": 47,
+              "end": 52
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "today",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation today at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "today",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation tomorrow at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "tomorrow",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation today at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 43
+          },
+          {
+            "label": "time",
+            "start": 47,
+            "end": 52
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 43
+            },
+            {
+              "label": "time",
+              "start": 47,
+              "end": 52
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "today",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation tomorrow at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "tomorrow",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-12-20 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-12-20",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation today at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 43
+          },
+          {
+            "label": "time",
+            "start": 47,
+            "end": 51
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 43
+            },
+            {
+              "label": "time",
+              "start": 47,
+              "end": 51
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "today",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation tomorrow at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "tomorrow",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation today at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 45
+          },
+          {
+            "label": "time",
+            "start": 49,
+            "end": 53
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 45
+            },
+            {
+              "label": "time",
+              "start": 49,
+              "end": 53
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "today",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation tomorrow at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "tomorrow",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-12-20 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-12-20",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-11-15 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-11-15",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation tomorrow at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "tomorrow",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation tomorrow at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "tomorrow",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-11-15 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-11-15",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation today at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 45
+          },
+          {
+            "label": "time",
+            "start": 49,
+            "end": 53
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 45
+            },
+            {
+              "label": "time",
+              "start": 49,
+              "end": 53
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "today",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation today at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "today",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-12-20 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-12-20",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-11-15 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-11-15",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-11-15 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-11-15",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-11-15 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-11-15",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation today at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "today",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-12-20 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-12-20",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation tomorrow at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "tomorrow",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-11-15 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 64
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 64
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-11-15",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation today at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "today",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation today at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 45
+          },
+          {
+            "label": "time",
+            "start": 49,
+            "end": 53
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 45
+            },
+            {
+              "label": "time",
+              "start": 49,
+              "end": 53
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "today",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation 2026-11-15 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "2026-11-15",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation today at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "label": "time",
+            "start": 53,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 49
+            },
+            {
+              "label": "time",
+              "start": 53,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "today",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-11-15 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-11-15",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation today at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "today",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation today at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 45
+          },
+          {
+            "label": "time",
+            "start": 49,
+            "end": 53
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 45
+            },
+            {
+              "label": "time",
+              "start": 49,
+              "end": 53
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "today",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation tomorrow at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "tomorrow",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-11-15 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-11-15",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation today at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 43
+          },
+          {
+            "label": "time",
+            "start": 47,
+            "end": 51
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 43
+            },
+            {
+              "label": "time",
+              "start": 47,
+              "end": 51
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "today",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation 2026-12-20 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "2026-12-20",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation today at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 43
+          },
+          {
+            "label": "time",
+            "start": 47,
+            "end": 51
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 43
+            },
+            {
+              "label": "time",
+              "start": 47,
+              "end": 51
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "today",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my basketball reservation today at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "basketball",
+            "date": "today",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation tomorrow at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "tomorrow",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-12-20 at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 59
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-12-20",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 64
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 64
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my cricket reservation tomorrow at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 27
+          },
+          {
+            "label": "date",
+            "start": 40,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 27
+            },
+            {
+              "label": "date",
+              "start": 40,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "cricket",
+            "date": "tomorrow",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 1 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "1 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-11-15 at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-11-15",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation today at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "today",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-11-15 at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-11-15",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation today at 3 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "label": "time",
+            "start": 51,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 47
+            },
+            {
+              "label": "time",
+              "start": 51,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "today",
+            "time": "3 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation 2026-11-15 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 53
+          },
+          {
+            "label": "time",
+            "start": 57,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 53
+            },
+            {
+              "label": "time",
+              "start": 57,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "2026-11-15",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation tomorrow at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 61
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 61
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "tomorrow",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 52
+          },
+          {
+            "label": "time",
+            "start": 56,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 52
+            },
+            {
+              "label": "time",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation today at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 57
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 57
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "today",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation 2026-11-15 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 51
+          },
+          {
+            "label": "time",
+            "start": 55,
+            "end": 60
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 51
+            },
+            {
+              "label": "time",
+              "start": 55,
+              "end": 60
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "2026-11-15",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 10 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 64
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 64
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "10 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation tomorrow at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 54
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "tomorrow",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my badminton reservation tomorrow at 5 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 29
+          },
+          {
+            "label": "date",
+            "start": 42,
+            "end": 50
+          },
+          {
+            "label": "time",
+            "start": 54,
+            "end": 58
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 29
+            },
+            {
+              "label": "date",
+              "start": 42,
+              "end": 50
+            },
+            {
+              "label": "time",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "fields": {
+            "sport": "badminton",
+            "date": "tomorrow",
+            "time": "5 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my pickleball reservation today at 9 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "label": "date",
+            "start": 43,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 30
+            },
+            {
+              "label": "date",
+              "start": 43,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "pickleball",
+            "date": "today",
+            "time": "9 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 2 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "2 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 11 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "11 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my football reservation today at 12 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 28
+          },
+          {
+            "label": "date",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "label": "time",
+            "start": 50,
+            "end": 55
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 28
+            },
+            {
+              "label": "date",
+              "start": 41,
+              "end": 46
+            },
+            {
+              "label": "time",
+              "start": 50,
+              "end": 55
+            }
+          ],
+          "fields": {
+            "sport": "football",
+            "date": "today",
+            "time": "12 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my chess reservation 2026-11-15 at 8 am",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "label": "date",
+            "start": 38,
+            "end": 48
+          },
+          {
+            "label": "time",
+            "start": 52,
+            "end": 56
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 25
+            },
+            {
+              "label": "date",
+              "start": 38,
+              "end": 48
+            },
+            {
+              "label": "time",
+              "start": 52,
+              "end": 56
+            }
+          ],
+          "fields": {
+            "sport": "chess",
+            "date": "2026-11-15",
+            "time": "8 am",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my table tennis reservation 2026-12-20 at 6 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 32
+          },
+          {
+            "label": "date",
+            "start": 45,
+            "end": 55
+          },
+          {
+            "label": "time",
+            "start": 59,
+            "end": 63
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 32
+            },
+            {
+              "label": "date",
+              "start": 45,
+              "end": 55
+            },
+            {
+              "label": "time",
+              "start": 59,
+              "end": 63
+            }
+          ],
+          "fields": {
+            "sport": "table tennis",
+            "date": "2026-12-20",
+            "time": "6 pm",
+            "players": null
+          }
+        }
+      },
+      {
+        "text": "i no longer need my lawn tennis reservation 2026-12-20 at 4 pm",
+        "gold_intent": "cancel",
+        "gold_entities": [
+          {
+            "label": "sport",
+            "start": 20,
+            "end": 31
+          },
+          {
+            "label": "date",
+            "start": 44,
+            "end": 54
+          },
+          {
+            "label": "time",
+            "start": 58,
+            "end": 62
+          }
+        ],
+        "prediction": {
+          "intent": "other",
+          "entities": [
+            {
+              "label": "sport",
+              "start": 20,
+              "end": 31
+            },
+            {
+              "label": "date",
+              "start": 44,
+              "end": 54
+            },
+            {
+              "label": "time",
+              "start": 58,
+              "end": 62
+            }
+          ],
+          "fields": {
+            "sport": "lawn tennis",
+            "date": "2026-12-20",
+            "time": "4 pm",
+            "players": null
+          }
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "dataset": "synthetic only; disjoint templates; not evidence of real-user generalization",
+    "test_sha256": "10976a8ec3aa470358ee5236289a53601c8ba193a571430dd039f86941826aeb",
+    "checkpoint_sha256": "47aba0c21bec1ae163e9d27baaba49e96098d7eb33bd16230a5cfaad53a6548f"
+  }
+}

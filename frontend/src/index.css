@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { font-family: 'Inter', system-ui, sans-serif; }
+
+body {
+  background:
+    radial-gradient(circle at 15% -10%, rgba(124,58,237,0.16) 0%, transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(37,99,235,0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(236,72,153,0.08) 0%, transparent 50%),
+    #f9fafb;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.25); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.4); }
+
+.glass-card {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -12px rgba(76,29,149,0.12);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg,#7c3aed,#2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg,#7c3aed,#4f46e5);
+  transition: all .2s ease;
+  box-shadow: 0 4px 14px -4px rgba(124,58,237,0.45);
+}
+.gradient-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -8px rgba(124,58,237,.55);
+}
+.gradient-btn:active:not(:disabled) { transform: translateY(0); }
+.gradient-btn:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
+
+.soft-card {
+  background: #ffffff;
+  border: 1px solid #eef0f3;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.soft-card:hover { box-shadow: 0 6px 20px -8px rgba(15,23,42,0.12); }
+
+.input-field {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.875rem;
+  background: rgba(255,255,255,0.8);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167,139,250,0.25);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* Keep login text clear of the input icons. */
+.input-field.pl-9 {
+  padding-left: 2.5rem;
+}
