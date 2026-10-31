@@ -1,0 +1,42 @@
+...............................................                          [100%]
+=============================== warnings summary ===============================
+../../campussphere-venv/lib/python3.12/site-packages/langgraph/checkpoint/base/__init__.py:24
+  /workspace/campussphere-venv/lib/python3.12/site-packages/langgraph/checkpoint/base/__init__.py:24: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+    from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+
+../../campussphere-venv/lib/python3.12/site-packages/starlette/testclient.py:40
+  /workspace/campussphere-venv/lib/python3.12/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_booking_flow.py: 66 warnings
+tests/test_dl_email.py: 12 warnings
+tests/test_otp_evaluation.py: 27 warnings
+  /workspace/campussphere-venv/lib/python3.12/site-packages/sqlalchemy/sql/schema.py:3596: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    return util.wrap_callable(lambda ctx: fn(), fn)  # type: ignore
+
+tests/test_booking_flow.py::test_returning_damaged_equipment_applies_standard_fine
+  /workspace/DL2_turf/backend/app/domain/services/equipment_service.py:54: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    loan.returned_at = datetime.utcnow()
+
+tests/test_otp_evaluation.py: 10 warnings
+  /workspace/DL2_turf/backend/app/api/v1/auth.py:84: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_otp_evaluation.py: 12 warnings
+  /workspace/DL2_turf/backend/app/api/v1/auth.py:114: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_otp_evaluation.py::test_otp_expires
+  /workspace/DL2_turf/backend/tests/test_otp_evaluation.py:57: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    row.expires_at=datetime.utcnow()-timedelta(seconds=1);db.commit()
+
+tests/test_otp_evaluation.py::test_resend_invalidates_old_code
+  /workspace/DL2_turf/backend/tests/test_otp_evaluation.py:78: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    row.sent_at=datetime.utcnow()-timedelta(seconds=61);db.commit()
+
+tests/test_otp_evaluation.py::test_email_request_hourly_limit
+  /workspace/DL2_turf/backend/tests/test_otp_evaluation.py:123: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    db.add(LoginThrottle(key=digest('request-email','ekansh@rknec.edu'),started_at=datetime.utcnow(),count=10));db.commit()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+47 passed, 133 warnings in 4.29s

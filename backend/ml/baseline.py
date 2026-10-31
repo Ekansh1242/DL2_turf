@@ -4,7 +4,7 @@ from ml.model import values
 def predict(text):
     patterns = {
         'sport': r'\b(?:table tennis|lawn tennis|football|cricket|basketball|badminton|pickleball|chess)\b',
-        'date': r'\b(?:today|tomorrow|\d{4}-\d{2}-\d{2})\b',
+        'date': r'\b(?:day after tomorrow|today|tomorrow|\d{4}-\d{2}-\d{2})\b',
         'time': r'\b\d{1,2}(?::\d{2})?\s*(?:am|pm)\b',
         'players': r'\b(\d+)\s+(?:players|people|students)\b'}
     spans = []

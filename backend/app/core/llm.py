@@ -11,7 +11,7 @@ class LLMClient:
     def __init__(self, model: str = "gpt-4o-mini"):
         self.model = model
         api_key = os.environ.get("OPENAI_API_KEY")
-        if not api_key:
+        if not api_key or api_key.strip() == "sk-...":
             raise RuntimeError("OPENAI_API_KEY is not set. The AI booking agent needs it to run.")
         self._client = AsyncOpenAI(api_key=api_key)
 

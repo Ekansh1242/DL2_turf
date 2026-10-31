@@ -15,15 +15,18 @@ from app.api.v1.admin_agent import router as admin_agent_router
 from app.db.session import engine
 from app.domain.models.models import Base
 
+from app.api.v1.model_evaluation import router as evaluation_router
+
 app = FastAPI(title="CampusSphere AI", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[v.strip() for v in __import__("os").environ.get("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if v.strip()],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+app.include_router(evaluation_router)
 app.include_router(auth_router)
 app.include_router(sports_router)
 app.include_router(slots_router)

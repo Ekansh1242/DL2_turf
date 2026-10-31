@@ -1,3 +1,5 @@
+> Superseded by V2_START_HERE.md: OTP login, balanced data, and local analytics are now implemented.
+
 # CampusSphere DL update
 
 The trained CPU BiLSTM and synthetic dataset are in backend/ml.

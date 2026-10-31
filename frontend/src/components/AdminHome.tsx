@@ -17,7 +17,9 @@ import {
   StudentOut, Sport, Slot, EquipmentIssueBreakdown, StudentFine, TodayBooking,
 } from "../api/client";
 
-type Tab = "dashboard" | "ask" | "book-for" | "today" | "reports";
+import ModelEvaluationTab from "./ModelEvaluationTab";
+
+type Tab = "evaluation" | "dashboard" | "ask" | "book-for" | "today" | "reports";
 
 function StatCard({ label, value, icon, accent }: { label: string; value: string | number; icon: JSX.Element; accent?: string }) {
   return (
@@ -461,6 +463,7 @@ function AskAITab({ token }: { token: string }) {
 
   return (
     <div className="max-w-xl flex flex-col gap-4">
+      <p className="text-xs text-gray-500">Local analytics uses keyword matching and read-only database queries. It does not use the trained booking model or an external LLM.</p>
       <div className="glass-card rounded-xl p-4">
         <div className="flex gap-2">
           <input className="input-field" placeholder="Ask about bookings, usage, fines..." value={question}
@@ -498,9 +501,10 @@ export default function AdminHome({ token }: { token: string }) {
 
   const tabs: { id: Tab; label: string; icon: JSX.Element }[] = [
     { id: "dashboard", label: "Dashboard", icon: <LayoutDashboard size={14} /> },
-    { id: "ask", label: "Ask AI", icon: <Sparkles size={14} /> },
+    { id: "ask", label: "Ask Analytics", icon: <Sparkles size={14} /> },
     { id: "book-for", label: "Book for Student", icon: <UserPlus size={14} /> },
     { id: "today", label: "Today", icon: <ClipboardList size={14} /> },
+    { id: "evaluation", label: "Model Evaluation", icon: <TrendingUp size={14} /> },
     { id: "reports", label: "Reports", icon: <FileDown size={14} /> },
   ];
 
@@ -509,7 +513,7 @@ export default function AdminHome({ token }: { token: string }) {
       <h1 className="text-xl font-bold gradient-text mb-1">Sports Department</h1>
       <p className="text-xs text-gray-500 mb-6">Live analytics, staff bookings, and reports.</p>
 
-      <div className="flex gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -524,6 +528,7 @@ export default function AdminHome({ token }: { token: string }) {
       </div>
 
       <motion.div key={tab} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }}>
+        {tab === "evaluation" && <ModelEvaluationTab token={token} />}
         {tab === "dashboard" && <DashboardTab token={token} />}
         {tab === "ask" && <AskAITab token={token} />}
         {tab === "book-for" && <BookForStudentTab token={token} />}

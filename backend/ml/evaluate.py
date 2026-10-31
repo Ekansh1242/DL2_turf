@@ -32,14 +32,14 @@ def measure(rows, predictions):
 def main():
     rows=load('test'); predictor=Predictor(ROOT/'artifacts/booking_model.pt')
     reports={name:measure(rows,[fn(r['text']) for r in rows]) for name,fn in [('bilstm',predictor.predict),('rules',baseline.predict)]}
-    reports['metadata']={'dataset':'synthetic only; disjoint templates; not evidence of real-user generalization','test_sha256':hashlib.sha256((ROOT/'data/test.jsonl').read_bytes()).hexdigest(),'checkpoint_sha256':hashlib.sha256((ROOT/'artifacts/booking_model.pt').read_bytes()).hexdigest()}
+    reports['metadata']={'dataset':'Balanced synthetic dataset v2; disjoint template families; recurring entity values; not evidence of real-user generalization','test_sha256':hashlib.sha256((ROOT/'data/test.jsonl').read_bytes()).hexdigest(),'checkpoint_sha256':hashlib.sha256((ROOT/'artifacts/booking_model.pt').read_bytes()).hexdigest()}
     out=ROOT/'artifacts'
     (out/'evaluation.json').write_text(json.dumps(reports,indent=2))
     lines=['# Held-out synthetic test evaluation','',reports['metadata']['dataset'],'','| Model | Intent macro F1 | Entity micro F1 | Complete request accuracy |','|---|---:|---:|---:|']
     for name in ['bilstm','rules']:
         r=reports[name]; lines.append(f"| {name} | {r['intent_report']['macro avg']['f1-score']:.4f} | {r['entity_micro']['f1']:.4f} | {r['complete_request_accuracy']:.4f} |")
         with (out/f'{name}_confusion_matrix.csv').open('w') as f:
-            writer=csv.writer(f);writer.writerow(['actual / predicted']+INTENTS)
+            writer=csv.writer(f, lineterminator='\n');writer.writerow(['actual / predicted']+INTENTS)
             writer.writerows([[label]+values for label,values in zip(INTENTS,r['confusion_matrix'])])
     lines += ['', 'Full precision/recall/F1, field accuracies, strict span matches, and every error: evaluation.json.', 'Confusion matrices: *_confusion_matrix.csv. Rows are actual labels, columns predicted.', 'Field accuracy includes absent fields. Complete request accuracy requires correct intent and every exact entity span.', 'Checkpoint chosen by validation loss only. Test data is used only after training.']
     (out/'EVALUATION.md').write_text('\n'.join(lines)+'\n')

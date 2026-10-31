@@ -316,3 +316,39 @@ export function askAnalytics(question: string, token: string) {
     token
   );
 }
+
+export function requestLoginOTP(email: string) {
+  return req<{message:string;resend_after:number;expires_in:number}>('/api/v1/auth/request-otp', {
+    method: 'POST', body: JSON.stringify({email})
+  });
+}
+export function verifyLoginOTP(email: string, code: string, name: string, roll_no: string, department: string) {
+  return req<LoginResult>('/api/v1/auth/verify-otp', {method:'POST', body:JSON.stringify({email,code,name,roll_no,department})});
+}
+export interface ModelScores {
+  n: number;
+  intent_report: Record<string, {precision:number;recall:number;'f1-score':number;support:number}>;
+  confusion_matrix_labels: string[];
+  confusion_matrix: number[][];
+  entity_per_field: Record<string,{precision:number;recall:number;f1:number}>;
+  entity_micro: {precision:number;recall:number;f1:number};
+  field_exact_accuracy: Record<string,number>;
+  complete_request_accuracy: number;
+  errors: unknown[];
+}
+export interface ModelEvaluation {
+  bilstm: ModelScores;
+  rules: ModelScores;
+  metadata: {dataset:string;test_sha256:string;checkpoint_sha256:string};
+  dataset_counts: Record<string,Record<string,number>>;
+}
+export function modelEvaluation(token: string) {
+  return req<ModelEvaluation>('/api/v1/admin/model/evaluation', {}, token);
+}
+export async function downloadModelDataset(split: string, token: string) {
+  const response = await fetch(`${API_BASE}/api/v1/admin/model/dataset/${split}`, {headers:{Authorization:`Bearer ${token}`}});
+  if (!response.ok) throw new Error('Dataset download failed. Sign in again if your session expired.');
+  const url=URL.createObjectURL(await response.blob());
+  const anchor=document.createElement('a'); anchor.href=url; anchor.download=`campussphere-${split}.jsonl`; anchor.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}

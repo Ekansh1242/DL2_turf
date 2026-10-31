@@ -52,7 +52,7 @@ async def booking_node(state: AIBookingState) -> AIBookingState:
         from app.core.local_nlu import parse_booking
         intent, parsed = parse_booking(state['raw_text'], now)
         if intent != 'book':
-            return _stop(state, 'needs_info', 'Please request a new booking here. Use My Bookings to cancel, or the slots view to check availability.', t0)
+            return _stop(state, 'needs_info', 'Please use the booking form for a new booking; use My Bookings to cancel or the slots view for availability.', t0)
     else:
         llm = get_llm_client()
     

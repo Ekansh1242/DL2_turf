@@ -1,1 +1,2 @@
+# Install CPU torch separately using the official CPU index (see DL_GUIDE.md).
 scikit-learn==1.6.1

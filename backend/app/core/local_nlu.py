@@ -18,8 +18,8 @@ def parse_booking(text, now):
         return result['intent'], ParsedBookingIntent()
     fields = result['fields']
     day = fields['date']
-    if day in ('today','tomorrow'):
-        day = (now + timedelta(days=day == 'tomorrow')).date().isoformat()
+    if day in ('today','tomorrow','day after tomorrow'):
+        day = (now + timedelta(days={'today':0,'tomorrow':1,'day after tomorrow':2}[day])).date().isoformat()
     hour = None
     if fields['time']:
         m = re.fullmatch(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm)', fields['time'])
