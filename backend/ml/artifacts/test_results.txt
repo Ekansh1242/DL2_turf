@@ -1,4 +1,4 @@
-...............................................                          [100%]
+................................................................         [100%]
 =============================== warnings summary ===============================
 ../../campussphere-venv/lib/python3.12/site-packages/langgraph/checkpoint/base/__init__.py:24
   /workspace/campussphere-venv/lib/python3.12/site-packages/langgraph/checkpoint/base/__init__.py:24: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
@@ -39,4 +39,4 @@ tests/test_otp_evaluation.py::test_email_request_hourly_limit
     db.add(LoginThrottle(key=digest('request-email','ekansh@rknec.edu'),started_at=datetime.utcnow(),count=10));db.commit()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-47 passed, 133 warnings in 4.29s
+64 passed, 133 warnings in 5.75s

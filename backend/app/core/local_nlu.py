@@ -1,7 +1,7 @@
 """CPU inference; learned extraction followed by explicit value normalization."""
 import os
 import re
-from datetime import timedelta
+from app.core.booking_dates import normalize_date
 from functools import lru_cache
 from pathlib import Path
 
@@ -17,9 +17,12 @@ def parse_booking(text, now):
     if result['intent'] != 'book':
         return result['intent'], ParsedBookingIntent()
     fields = result['fields']
-    day = fields['date']
-    if day in ('today','tomorrow','day after tomorrow'):
-        day = (now + timedelta(days={'today':0,'tomorrow':1,'day after tomorrow':2}[day])).date().isoformat()
+    try:
+        # Prefer a date explicitly present in the request. The normalizer also
+        # resolves formats the small synthetic training set did not cover.
+        day = normalize_date(text, now) or normalize_date(fields['date'] or '', now)
+    except ValueError:
+        day = None
     hour = None
     if fields['time']:
         m = re.fullmatch(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm)', fields['time'])

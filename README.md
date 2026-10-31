@@ -41,4 +41,4 @@ python -m ml.evaluate
 
 From frontend: `npm ci` and `npm run build`.
 
-47 backend tests and the frontend production build pass. SMTP is mocked in tests; verify a real OTP on your machine. PostgreSQL concurrency and production deployment were not validated in this cloud task. Configure HTTPS, private database access, trusted proxy settings and exact CORS origins before public hosting.
+64 backend tests and the frontend production build pass. SMTP is mocked in tests; verify a real OTP on your machine. PostgreSQL concurrency and production deployment were not validated in this cloud task. Configure HTTPS, private database access, trusted proxy settings and exact CORS origins before public hosting.

@@ -11,7 +11,7 @@ const NODE: Record<string, { label: string; icon: JSX.Element }> = {
   commit_node: { label: "Commit (deterministic)", icon: <Zap size={14} /> },
 };
 
-const EXAMPLES = ["Football at 6pm today", "Book badminton this evening", "Cricket tomorrow morning"];
+const EXAMPLES = ["Book football at 6pm today", "Book badminton at 5pm tomorrow", "Book cricket on 1st November at 9am"];
 
 function fmt(iso: string) {
   return new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
@@ -89,8 +89,9 @@ export default function AIBookingStep({ token }: { token: string }) {
       <p className="text-xs text-gray-500 text-center mb-5">Describe what you want. The agent checks real availability and shows every step it takes.</p>
 
       <form onSubmit={(e) => { e.preventDefault(); run(message); }} className="glass-card rounded-2xl p-4 mb-3">
-        <textarea className="input-field" rows={2} placeholder="e.g. Football at 6pm today for 10 players"
+        <textarea className="input-field" rows={2} placeholder="e.g. Book football on 1st November at 6pm for 10 players"
           value={message} onChange={(e) => setMessage(e.target.value)} />
+        <p className="text-xs text-gray-500 mt-2">Use today, tomorrow, 1st November, or YYYY-MM-DD. Dates without a year use the current year. Include an exact hour, such as 6pm.</p>
         <button type="submit" disabled={loading || !message.trim()}
           className="gradient-btn text-white rounded-xl py-2.5 text-sm font-medium w-full mt-3 flex items-center justify-center gap-2">
           {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
